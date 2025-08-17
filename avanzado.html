@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FUTURE STEM LAB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    
+    html {
+      overflow-y: scroll;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f8fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Nav */
+    nav {
+      background: #002366;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Secciones */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: #eef3fb;
+      padding: 70px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #003080;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+      /* Cursos */
+    .cursos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .curso {
+      /* Añade esta línea para que el padding y el borde se incluyan en el ancho */
+      box-sizing: border-box; 
+      
+      /* Usa esta fórmula para el ancho de las 4 tarjetas */
+      width: calc((100% - 10 * 25px) / 4);
+
+      border-radius: 12px;
+      padding: 25px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .curso:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .curso h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    /* Botón */
+    button {
+      background: #004aad;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #003080;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 0px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header y Nav del primer código -->
+  <header>
+    <h1>Future STEM Lab</h1>
+    <p>Cursos de STEM para estudiantes de bachillerato</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="quienes.html">Quiénes somos</a>
+  </nav>
+
+  <!-- Inicio -->
+  <section id="inicio" class="hero">
+    <h1 style="font-size: 60px;">Avanzado</h1>
+    <p>A continuación encontrarás una serie de lecciones que te ayudarán a acreditar el nivel avanzado del curso de Robótica</p>
+    <br>
+    <h3>Objetivos</h3>
+  
+    <p>✔ Integrar múltiples sensores y lógica autónoma.</p>
+    <p>✔ Introducir conceptos de IA o decisiones complejas (por ejemplo, estacionamiento solo si hay espacio libre).</p>
+
+  </section>
+
+  <!-- Cursos -->
+  <section id="cursos">
+    <h2>Temas</h2>
+    <div class="cursos">
+      <div class="curso">
+        <h3>Sensores múltiples para detectar disponibilidad de espacios.</h3>
+        <p>Este módulo integra sensores de ultrasonido y sensores infrarrojos para una detección de ocupación robusta y redundante.</p>
+        <p>El objetivo es fusionar los datos para minimizar lecturas falsas, asegurando la precisión de la disponibilidad de cada espacio.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button>Ver más</button>
+      </div>
+      <div class="curso">
+        <h3>Control de servo y luces indicadoras (Usando LEDs RGB).</h3>
+        <p>Se programará el control preciso de un servo motor para el despliegue de barreras o señalizaciones. </p>
+        <p>Las luces LED RGB se utilizarán como un sistema de estado visual, comunicando de forma instantánea si un espacio está libre (verde), ocupado (rojo) o en un estado de transición (amarillo), proporcionando una retroalimentación en tiempo real.</p>
+        <br>
+
+        <button>Ver más</button>
+      </div>
+      <div class="curso">
+        <h3>Lógica avanzada: si el espacio está ocupado, buscar otro o esperar.</h3>
+        <p>La lógica se basa en un árbol de decisión o una máquina de estados finitos. Al detectar un espacio ocupado, el robot ejecutará un algoritmo de búsqueda para encontrar el siguiente lugar disponible. Si no hay espacios libres, entrará en un modo de espera activo, reevaluando periódicamente la situación. Esto demuestra un comportamiento reactivo y autónomo.</p>
+        <br>
+        <button>Ver más</button>
+      </div>
+      <div class="curso">
+        <h3>Mockup de dashboard con datos del robot y disponibilidad de lugares.</h3>
+        <p>El dashboard servirá como una interfaz de monitoreo remoto. Se implementará una representación visual de la planta de estacionamiento, mostrando el estado en tiempo real de cada espacio. Se incluirán métricas clave como el número de espacios libres, el estado de la batería del robot, y un log de eventos, facilitando la gestión del sistema y el análisis de datos.</p>
+        <br>
+        <button>Ver más</button>
+      </div>
+    </div>
+  </section>
+
+       <!-- Proyecto Integrador -->
+    <section class="hero" style="background-color: #fdeaf2; margin-bottom: 0px;">
+      <center>
+      <section id="Proyecto" class="curso" style="width: 920px; justify-content: center;">
+      <h2>🦾 Proyecto integrador 🦾</h2>
+      <p>Este es un proyecto de simulación que te sumerge en la ingeniería de sistemas autónomos. En este modelo, los vehículos virtuales interactúan con sensores que determinan su acceso. Un servomotor levanta o baja la barrera basándose en una lógica de decisión avanzada que verifica la disponibilidad de espacios.</p>
+      <p>El corazón del sistema es un dashboard en tiempo real que te permite monitorear cada acción, mostrando la ocupación de cada lugar y el flujo de vehículos. Es una demostración de cómo la robótica y la programación inteligente pueden optimizar la gestión de recursos en el mundo real.</p>
+      <br>
+       <img src="avan.jpeg" alt="Simulación de estacionamiento automatizado. Los LEDs y el buzzer representan un indicador de seguridad automático. Sirve para advertir al usuario cuando un objeto está demasiado cerca." width="800">
+      <br>
+      <br>
+      <button>Ver más</button>
+      <br>
+      <br>
+      <p> Proyecto base: <a href="https://www.tinkercad.com/things/acfiWXweIDr/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=D6FA6etE3y2kDu-XGpAeuF_IRfd42-s5-CWR0EnEDHo" target="_blank"> Haz clic aquí</a></p>
+</p>
+      <br>
+      <br>
+      <a href="/ia.html">
+      <button style="font-size: 18px; background-color: #e64b9e; color: white;"> Califica tu proyecto</button>
+      </a>
+      <br>
+      <br>
+    </section>
+    </center>
+  </section>
+
+
+  <!-- Contacto -->
+  <footer>
+    <p>© 2025 Future STEM Lab</p>
+  </footer>
+
+</body>
+</html>

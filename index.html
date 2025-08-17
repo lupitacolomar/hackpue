@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Future STEM Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    
+    html {
+      overflow-y: scroll;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f8fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Nav */
+    nav {
+      background: #002366;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Secciones */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: #eef3fb;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #003080;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    /* Cursos */
+    .cursos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .curso {
+      border-radius: 12px;
+      padding: 25px;
+      width: 260px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .curso:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .curso h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    /* Botón */
+    button {
+      background: #004aad;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #003080;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .nini {
+  max-width: 600px;   /* ancho máximo del párrafo */
+  margin: 0 auto;     /* centra el bloque horizontalmente */
+  text-align: center; /* centra el texto dentro del bloque */
+  line-height: 1.6;   /* mejora la lectura */
+  margin-bottom: 6px;
+    }
+  
+  </style>
+</head>
+<body>
+
+  <!-- Header y Nav del primer código -->
+  <header>
+    <h1>Future STEM Lab</h1>
+    <p>Cursos de STEM para estudiantes de bachillerato</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="quienes.html">Quiénes somos</a>
+  </nav>
+
+  <!-- Inicio -->
+  <section id="inicio" class="hero">
+    <img src="logo3.png" alt="Logo de Future STEM Lab de un diseño abstracto con formar alargadas que recuerdan a llamas, esta pintada con un efecto acuarela con tonos degradados de amarillo, verde, azul y rosa" width="200">
+    <h1>Bienvenido a Future STEM Lab</h1>
+    <p class = "nini">
+    Future STEM Lab es una plataforma educativa que ofrece cursos en línea de STEM 
+    diseñados para inspirar a alumnos de bachillerato y mostrarles cómo se aplican estas carreras de forma práctica.
+    Ayudándolos a tomar decisiones informadas sobre su futuro profesional.
+    </p>
+
+    <a href="cursos.html">
+      <button>Explorar Cursos</button>
+    </a>
+  </section>
+
+  <!-- Cursos -->
+  <section id="cursos">
+    <h2>Nuestros Cursos</h2>
+    <div class="cursos">
+      <div class="curso">
+        <h3>Introducción a Circuitos - Thinkercad</h3>
+        <p>Aprende a construir circuitos básicos en Tinkercad.</p>
+        <a href="cursos.html#robotica"><button>Ver más</button></a>
+      </div>
+      <div class="curso">
+        <h3>Programación con Micro:bit</h3>
+        <p>Aprende a programar y controlar dispositivos físicos.</p>
+        <a href="cursos.html#programacion"><button>Ver más</button></a>
+      </div>
+      <div class="curso">
+        <h3>Laboratorio de ADN</h3>
+        <p>Manipula muestras y experimenta con kits educativos de genética.</p>
+        <a href="cursos.html#biotecnologia"><button>Ver más</button></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contacto -->
+  <footer>
+    <p>© 2025 Future STEM Lab</p>
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiénes Somos - Future STEM Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia STEM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    
+    html {
+      overflow-y: scroll;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f8fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Nav */
+    nav {
+      background: #002366;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Secciones */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: #eef3fb;
+      padding: 70px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #003080;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    /* Cursos */
+    .cursos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .curso {
+      border-radius: 12px;
+      padding: 25px;
+      width: 260px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .curso:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .curso h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    /* Botón */
+    button {
+      background: #004aad;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #003080;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Future STEM Lab</h1>
+    <p>Cursos de STEM para estudiantes de bachillerato</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="quienes.html">Quiénes somos</a>
+  </nav>
+
+  <!-- Contenido principal -->
+   
+
+    <!-- Información general de la organización -->
+  <section id="info-general" class="cursos" style="justify-content: center;">
+    <div class="curso" style="width: 820px;"> <!-- ancho similar a los tres juntos -->
+      <img src="logo3.png" alt="Logo de Future STEM Lab de un diseño abstracto con formar alargadas que recuerdan a llamas, esta pintada con un efecto acuarela con tonos degradados de amarillo, verde, azul y rosa" width="200">
+      <h3>Información General</h3>
+      <p>
+        Future STEM Lab es una plataforma dedicada a la educación en STEM para estudiantes de bachillerato. Nuestro objetivo es ofrecer cursos de calidad, fomentar la curiosidad científica y apoyar a estudiantes, instituciones y ONGs en su desarrollo educativo.
+      </p>
+    </div>
+  </section>
+
+
+  <section id="quienes" class="cursos">
+    <div class="curso">
+      <h3>Estudiantes</h3>
+      <p>
+        Queremos que descubras tu vocación mientras aprendes de manera divertida y aplicada. A través de cursos gratuitos en línea, simulaciones interactivas y proyectos como el estacionamiento inteligente, podrás experimentar cómo es trabajar en programación, electrónica y robótica.
+      </p>
+    </div>
+
+    <div class="curso">
+      <h3>Institución Académicas</h3>
+      <p>
+        Sabemos que las escuelas buscan ofrecer experiencias de aprendizaje de vanguardia. Por eso ofrecemos planes flexibles que incluyen desde el acceso gratuito a los cursos online hasta licencias con kits físicos modulares (Arduino, sensores, servomotores, etc.) para que los alumnos lleven sus proyectos a la vida real.
+        Ofrecemos: versiones online gratuitas y licencias premium que incluyen kits físicos.
+      </p>
+    </div>
+
+    <div class="curso">
+      <h3>ONGs</h3>
+      <p>
+        Creemos en la educación como motor de cambio social. Por eso, trabajamos con ONGs y aliados estratégicos que financian kits para escuelas en sectores vulnerables. Cada donación se transforma en oportunidades reales para que más jóvenes descubran las carreras STEAM
+      </p>
+    </div>
+  </section>
+
+
+    <!-- Contacto -->
+  <footer>
+    <p>© 2025 Future STEM Lab</p>
+  </footer>
+
+</body>
+</html>

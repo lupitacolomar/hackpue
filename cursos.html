@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos - Future STEM Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html {
+      overflow-y: scroll;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f7f8fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    nav {
+      background: #002366;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    section {
+      padding: 40px;
+      max-width: 950px;
+      margin: auto;
+    }
+    h2 {
+      color: #003080;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    /* Cards de temas */
+    .topic-card {
+      background:white;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      padding:15px;
+      margin-bottom:20px;
+    }
+    .topic-card h3 {
+      color:#003080;
+      margin:0;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .topic-card p {
+      margin:5px 0 0 0;
+      color:#555;
+    }
+
+    .topic-content {
+      background:#eef3fb;
+      padding:15px;
+      border-radius:12px;
+      margin-top:15px;
+      display:none;
+    }
+    .subtopic h4 {
+      color:#004aad;
+      margin-bottom:10px;
+    }
+    .course-detail {
+      background:white;
+      padding:12px;
+      border-radius:10px;
+      margin-bottom:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+    .course-detail h5 {
+      color:#003080;
+      margin-bottom:6px;
+    }
+
+    /* Fases como botones */
+    .course-detail ul li {
+      list-style:none;
+      background:#eef3fb;
+      padding:8px 12px;
+      margin:5px 0;
+      border-radius:6px;
+      cursor:pointer; /* Indica que es clicable */
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .course-detail ul li:hover {
+      background:#004aad;
+      color:white;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    a {
+  color: inherit; /* Hereda el color del texto normal */
+  text-decoration: none; /* Quita el subrayado */
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Future STEM Lab</h1>
+  <p>Cursos de STEM para estudiantes de bachillerato</p>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="quienes.html">Quiénes somos</a>
+</nav>
+
+<section id="cursos">
+  <h2>Nuestros Cursos por Tema</h2>
+
+  <!-- Tema: Robótica -->
+  <div class="topic-card">
+    <div class="curso" onclick="toggleTopic('robotica')">
+      <h3>Robótica</h3>
+      <p>Haz clic para explorar cursos relacionados con robótica.</p>
+    </div>
+    <div id="robotica" class="topic-content">
+      <div class="subtopic">
+        <h4>Cursos Sin Kits</h4>
+        <div class="course-detail">
+          <h5>Introducción a Circuitos</h5>
+          <p>Aprende a construir circuitos básicos en Tinkercad.</p>
+          <ul>
+
+            <li><strong><a href="basico.html">Básica:</a></strong> Semáforo simple</li>
+            <li><strong><a href="Medio.html">Intermedia:</a></strong> Motor básico</li>
+            <li><strong><a href="avanzado.html">Avanzada:</a></strong> Mini robot guiado</li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="subtopic">
+        <h4>Cursos Con Kits</h4>
+        <div class="course-detail">
+          <h5>Robótica con Arduino</h5>
+          <p>Construye proyectos reales con Arduino y sensores.</p>
+          <ul>
+            <li><strong>Básica:</strong> Semáforo con LEDs</li>
+            <li><strong>Intermedia:</strong> Motor con control</li>
+            <li><strong>Avanzada:</strong> Mini vehículo autónomo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tema: Programación -->
+  <div class="topic-card">
+    <div class="curso" onclick="toggleTopic('programacion')">
+      <h3>Programación</h3>
+      <p>Haz clic para explorar cursos relacionados con programación.</p>
+    </div>
+    <div id="programacion" class="topic-content">
+      <div class="subtopic">
+        <h4>Cursos Sin Kits</h4>
+        <div class="course-detail">
+          <h5>Introducción a Python</h5>
+          <p>Aprende los fundamentos de Python y algoritmos básicos.</p>
+          <ul>
+            <li><strong>Básica:</strong> Variables y operaciones</li>
+            <li><strong>Intermedia:</strong> Funciones y bucles</li>
+            <li><strong>Avanzada:</strong> Proyectos simples con gráficos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="subtopic">
+        <h4>Cursos Con Kits</h4>
+        <div class="course-detail">
+          <h5>Programación con Micro:bit</h5>
+          <p>Aprende a programar y controlar dispositivos físicos.</p>
+          <ul>
+            <li><strong>Básica:</strong> LEDs y botones</li>
+            <li><strong>Intermedia:</strong> Sensores de movimiento</li>
+            <li><strong>Avanzada:</strong> Proyecto de alarma</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Tema: Biotecnología -->
+  <div class="topic-card">
+    <div class="curso" onclick="toggleTopic('biotecnologia')">
+      <h3>Biotecnología</h3>
+      <p>Haz clic para explorar cursos relacionados con biotecnología.</p>
+    </div>
+    <div id="biotecnologia" class="topic-content">
+      <div class="subtopic">
+        <h4>Cursos Sin Kits</h4>
+        <div class="course-detail">
+          <h5>Introducción a ADN</h5>
+          <p>Aprende sobre genética y manipulación de ADN virtual.</p>
+          <ul>
+            <li><strong>Básica:</strong> Conceptos de genética</li>
+            <li><strong>Intermedia:</strong> Experimentos virtuales</li>
+            <li><strong>Avanzada:</strong> Mini-proyecto genético</li>
+          </ul>
+        </div>
+      </div>
+      <div class="subtopic">
+        <h4>Cursos Con Kits</h4>
+        <div class="course-detail">
+          <h5>Laboratorio de ADN</h5>
+          <p>Manipula muestras y experimenta con kits educativos de genética.</p>
+          <ul>
+            <li><strong>Básica:</strong> Extracción de ADN</li>
+            <li><strong>Intermedia:</strong> PCR y análisis</li>
+            <li><strong>Avanzada:</strong> Mini-experimento de ingeniería genética</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    <!-- Tema: Biotecnología -->
+  <div class="topic-card">
+    <div class="curso" onclick="toggleTopic('industrial')">
+      <h3>Ingeniería Industrial</h3>
+      <p>Haz clic para explorar cursos relacionados con la ingeniería industrial.</p>
+    </div>
+    <div id="industrial" class="topic-content">
+      <div class="subtopic">
+        <h4>Cursos Sin Kits</h4>
+        <div class="course-detail">
+          <h5>Introducción al Balanceo de Líneas de Producción</h5>
+          <p>Conocer las bases de la Ingeniería Industrial y aplicar herramientas fundamentales para el análisis y mejora de procesos productivos.</p>
+          <ul>
+            <li><strong>Básica:</strong> Análisis de tiempos y movimientos en una estación de trabajo manual</li>
+            <li><strong>Intermedia:</strong> Balanceo de línea de producción en una planta de ensamble</li>
+            <li><strong>Avanzada:</strong> Diseño y simulación de un sistema logístico con software de optimización</li>
+          </ul>
+        </div>
+      </div>
+      <div class="subtopic">
+        <h4>Cursos Con Kits</h4>
+        <div class="course-detail">
+          <h5>Introducción a la Ingeniería Industrial con Prácticas de Campo</h5>
+          <p>Realiza experimentos reales de análisis de tiempos, balanceo de líneas y optimización de procesos productivos.</p>
+          <ul>
+            <li><strong>Básica:</strong> Diseñar un estudio de tiempos</li>
+            <li><strong>Intermedia:</strong> Construir una línea de ensamble simulada</li>
+            <li><strong>Avanzada:</strong> Desarrollar un sistema de producción completo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+      <!-- Tema: Biotecnología -->
+  <div class="topic-card">
+    <div class="curso" onclick="toggleTopic('mecanica')">
+      <h3>Mecánica</h3>
+      <p>Haz clic para explorar cursos relacionados con la ingeniería mecánica.</p>
+    </div>
+    <div id="mecanica" class="topic-content">
+      <div class="subtopic">
+        <h4>Cursos Sin Kits</h4>
+        <div class="course-detail">
+          <h5>Diseño y Prototipado en Ingeniería Mecánica</h5>
+          <p>Explora el proceso completo de diseño mecánico a través de proyectos prácticos.</p>
+          <ul>
+            <li><strong>Básica:</strong> Diseño y prueba de un puente de celosía en software CAD</li>
+            <li><strong>Intermedia:</strong> Construcción y análisis de un sistema de transmisión por engranajes</li>
+            <li><strong>Avanzada:</strong> Simulación CFD y análisis estructural de una turbina hidráulica</li>
+          </ul>
+        </div>
+      </div>
+      <div class="subtopic">
+        <h4>Cursos Con Kits</h4>
+        <div class="course-detail">
+          <h5>Mecánica Aplicada a análisis de fuerzas y movimiento</h5>
+          <p>Analiza fuerzas, equilibrio, leyes de Newton y movimiento en sistemas reales.</p>
+          <ul>
+            <li><strong>Básica:</strong> Carrito impulsado con ligas</li>
+            <li><strong>Intermedia:</strong> Lanzador de proyectiles
+            </li>
+            <li><strong>Avanzada:</strong> Grúa con poleas y contrapesos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</section>
+
+<footer>
+  <p>© 2025 Future STEM Lab</p>
+</footer>
+
+<script>
+  function toggleTopic(id){
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+  }
+</script>
+
+</body>
+
+<script>
+  function toggleTopic(id){
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+  }
+
+  // Al cargar la página, revisa si hay un hash (#robotica, #programacion, etc.)
+  window.onload = function() {
+    if(window.location.hash) {
+      const id = window.location.hash.substring(1);
+      const el = document.getElementById(id);
+      if(el) {
+        el.style.display = 'block'; // abrir automáticamente
+        el.scrollIntoView({behavior: "smooth"}); // llevar al curso
+      }
+    }
+  }
+</script>
+
+</html>

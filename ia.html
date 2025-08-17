@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Revisor con IA - Future STEM Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- ESTILOS VISUALES DE FUTURE STEM LAB --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background: #f7f8fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            color: #003080;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* --- NUEVO ESTILO PARA EL BOTÓN DE REGRESO --- */
+        .btn-regresar {
+            display: inline-block;
+            margin-bottom: 30px; /* Espacio entre el botón y la tarjeta */
+            text-decoration: none;
+            color: #004aad;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .btn-regresar:hover {
+            color: #003080;
+            text-decoration: underline;
+        }
+        /* ------------------------------------------- */
+
+        .revisor-card {
+            border-radius: 12px;
+            padding: 25px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .revisor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        #upload-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #upload-label {
+            border: 2px dashed #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        #upload-label:hover {
+            border-color: #004aad;
+        }
+        #upload-label span {
+            color: #004aad;
+            font-weight: 600;
+        }
+        #image-file {
+            display: none;
+        }
+
+        #preview {
+            max-width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+            display: none;
+            border: 1px solid #e0e0e0;
+        }
+
+        button {
+            background: #004aad;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #003080;
+        }
+
+        #feedback {
+            margin-top: 20px;
+            padding: 25px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Revisor de Circuitos IA</h1>
+        <p>Sube una foto (JPG) de tu circuito para que la IA lo revise según las instrucciones.</p>
+
+        <!-- === BOTÓN AÑADIDO AQUÍ === -->
+        <a href="/index.html" class="btn-regresar">‹ Volver a la página principal</a>
+        <!-- ========================== -->
+
+        <div class="revisor-card">
+            <form id="upload-form">
+                <label for="image-file" id="upload-label">
+                    <p>Haz clic aquí para <span>seleccionar tu imagen</span>.</p>
+                </label>
+                <input type="file" id="image-file" name="circuitoJpg" accept="image/jpeg" required>
+                
+                <img id="preview" alt="Vista previa de la imagen"/>
+                <button type="submit">Revisar Mi Circuito</button>
+            </form>
+        </div>
+
+        <div id="feedback">
+            Aquí aparecerá la retroalimentación de la IA...
+        </div>
+    </div>
+
+    <script>
+        // --- El SCRIPT sigue siendo el mismo. No se necesita ningún cambio aquí ---
+        const form = document.getElementById('upload-form');
+        const divFeedback = document.getElementById('feedback');
+        const inputFile = document.getElementById('image-file');
+        const previewImage = document.getElementById('preview');
+        const uploadLabel = document.getElementById('upload-label');
+
+        inputFile.addEventListener('change', () => {
+            const file = inputFile.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+                uploadLabel.querySelector('p').innerHTML = `Archivo: <span>${file.name}</span>`;
+            }
+        });
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData();
+            const imageFile = inputFile.files[0];
+            formData.append('circuitoJpg', imageFile);
+            divFeedback.innerText = "Analizando la imagen de tu circuito... Esto puede tardar un momento.";
+            previewImage.style.opacity = 0.5;
+            try {
+                const response = await fetch('/revisar-circuito-jpg', {
+                    method: 'POST',
+                    body: formData,
+                });
+                if (!response.ok) {
+                    throw new Error("El servidor respondió con un error: " + response.status);
+                }
+                const data = await response.json();
+                divFeedback.innerText = data.feedback;
+            } catch (error) {
+                console.error("Error:", error);
+                divFeedback.innerText = "¡Oh no! Hubo un problema al enviar o procesar la imagen.";
+            } finally {
+                previewImage.style.opacity = 1;
+            }
+        });
+    </script>
+
+</body>
+</html>

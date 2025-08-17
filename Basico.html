@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FUTURE STEM LAB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    
+    html {
+      overflow-y: scroll;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f8fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Nav */
+    nav {
+      background: #002366;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Secciones */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: #eef3fb;
+      padding: 70px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #003080;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    /* Cursos */
+    .cursos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .curso {
+      border-radius: 12px;
+      padding: 25px;
+      width: 260px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .curso:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .curso h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    /* Botón */
+    button {
+      background: #004aad;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #003080;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 0px;
+    }
+        a {
+  color: inherit; /* Hereda el color del texto normal */
+  text-decoration: none; /* Quita el subrayado */
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header y Nav del primer código -->
+  <header>
+    <h1>Future STEM Lab</h1>
+    <p>Cursos de STEM para estudiantes de bachillerato</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="quienes.html">Quiénes somos</a>
+  </nav>
+
+  <!-- Inicio -->
+  <section id="inicio" class="hero">
+    <h1 style="font-size: 60px;">Básico</h1>
+    <p>A continuación encontrarás una serie de lecciones que te ayudarán a acreditar el nivel básico del curso de Robótica</p>
+    <br>
+    <h3>Objetivos</h3>
+  
+    <p>✔ Introducir sensores y programación básica.</p>
+    <p>✔ Simular la detección de un vehículo aproximándose al estacionamiento.</p>
+
+  </section>
+
+  <!-- Cursos -->
+  <section id="cursos">
+    <h2>Temas</h2>
+    <div class="cursos">
+      <div class="curso">
+        <h3>Conceptos básicos de sensores y leds (Ultrasónico e IR)</h3>
+        <p>Los sensores permiten que un sistema detecte lo que ocurre en su entorno.</p>
+        <p>Ultrasonico: mide distancias enviando ondas sonoras y calculando el tiempo que tarda en regresar el eco.</p>
+        <br>
+        <br>
+        <br>
+        <button>Ver más</button>
+      </div>
+      <div class="curso">
+        <h3>Simulación de Arduino utilizando Tinkercad (Circuits)</h3>
+        <p>Tinkercad es una plataforma en línea que permite diseñar y simular circuitos electrónicos. </p>
+        <p>Con ella, se pueden conectar sensores, programar un Arduino y probar su funcionamiento totalmente digital.</p>
+        <br>
+        <br>
+        <br>
+        
+        <button>Ver más</button>
+      </div>
+      <div class="curso">
+        <h3>Lectura de datos del sensor y condiciones básicas</h3>
+        <p>El Arduino puede leer valores que envían los sensores (por ejemplo, la distancia detectada por un sensor ultrasónico).</p>
+        <p>Con estructuras condicionales como if/else, el programa puede “decidir” qué hacer según la situación.</p>
+        <br>
+        <br>
+        <button>Ver más</button>
+      </div>
+    </div>
+  </section>
+
+       <!-- Proyecto Integrador -->
+    <section class="hero" style="background-color: #fdeaf2; margin-bottom: 0px;">
+      <center>
+      <section id="Proyecto" class="curso" style="width: 920px; justify-content: center;">
+      <h2>🦾 Proyecto integrador 🦾</h2>
+      <p>El trabajo consiste en diseñar una simulación de espacios de estacionamiento; en donde se implementará el uso del sensor ultrasónico, en donde a partir de cierta distancia
+         el led RGB estará en color verde para indicar que el espacio está libre; no obstante, si la distancia es menor el led cambiará a rojo para indicar que el espacio
+         se encuentra ocupado</p>
+      <br>
+       <img src="vehiculo.png" alt="Sensor simulado detecta que un “carrito” virtual está cerca del estacionamiento." width="800">
+      <br>
+      <br>
+      <button>Ver más</button>
+      <br>
+      <br>
+      <p> Proyecto base: <a href="https://www.tinkercad.com/things/1XlQPMGOH73-nivel-basico-deteccion-de-vehiculo/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard" target="_blank"> Haz clic aquí
+  </a>
+</p>
+      <br>
+      <br>
+      <a href="/ia.html">
+      <button style="font-size: 18px; background-color: #e64b9e; color: white;"> Califica tu proyecto</button>
+      </a>
+      <br>
+      <br>
+    </section>
+    </center>
+  </section>
+
+ 
+
+  <!-- Contacto -->
+  <footer>
+    <p>© 2025 Future STEM Lab</p>
+  </footer>
+
+</body>
+</html>

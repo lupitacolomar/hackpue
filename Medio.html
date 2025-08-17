@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FUTURE STEM LAB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    
+    html {
+      overflow-y: scroll;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f8fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Nav */
+    nav {
+      background: #002366;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Secciones */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: #eef3fb;
+      padding: 70px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #003080;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    /* Cursos */
+    .cursos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .curso {
+      border-radius: 12px;
+      padding: 25px;
+      width: 260px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .curso:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .curso h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    /* Botón */
+    button {
+      background: #004aad;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #003080;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #003080, #004aad);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 0px;
+    }
+            a {
+  color: inherit; /* Hereda el color del texto normal */
+  text-decoration: none; /* Quita el subrayado */
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header y Nav del primer código -->
+  <header>
+    <h1>Future STEM Lab</h1>
+    <p>Cursos de STEM para estudiantes de bachillerato</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="quienes.html">Quiénes somos</a>
+  </nav>
+
+  <!-- Inicio -->
+  <section id="inicio" class="hero">
+    <h1 style="font-size: 60px;">Intermedio</h1>
+    <p>A continuación encontrarás una serie de lecciones que te ayudarán a acreditar el nivel intermedio del curso de Robótica</p>
+    <br>
+    <h3>Objetivos</h3>
+  
+    <p>✔ Integrar actuadores (servo) para responder a sensores.</p>
+    <p>✔ Introducir lógica más compleja: sensor + acción mecánica.</p>
+
+  </section>
+
+  <!-- Cursos -->
+  <section id="cursos">
+    <h2>Temas</h2>
+    <div class="cursos">
+      <div class="curso">
+        <h3>Introduccion al servomotor desde Arduino</h3>
+        <p>Consiste en programar el microcontrolador para mover un servomotor a diferentes posiciones de ángulo. </p>
+        <p>Arduino envía señales que determinan la posición del eje del servo, lo que permite controlar mecanismos como brazos, barreras o ruedas.</p>
+        <br>
+        <br>
+        <br>
+        <button>Ver más</button>
+      </div>
+      <div class="curso">
+        <h3>Lectura del sensor +  activación del servo</h3>
+        <p>Se basa en obtener información del entorno mediante un sensor y usar esos datos para tomar decisiones. </p>
+        <p>En este caso, la lectura del sensor activa el servomotor, que responde moviéndose cuando se detecta un objeto dentro de un rango específico.</p>
+        <br>
+        <br>
+        <br>
+        
+        <button>Ver más</button>
+      </div>
+      <div class="curso">
+        <h3>Simulación de movimiento (barrera abriéndose)</h3>
+        <p>Implica representar en un entorno de simulación el funcionamiento del sistema físico. </p>
+        <p>Se visualiza cómo el servo acciona la barrera para abrirla o cerrarla en respuesta a la detección del vehículo, mostrando de forma gráfica la interacción entre la electrónica y la mecánica.</p>
+        <br>
+    
+        <button>Ver más</button>
+      </div>
+    </div>
+  </section>
+
+       <!-- Proyecto Integrador -->
+    <section class="hero" style="background-color: #fdeaf2; margin-bottom: 0px;">
+      <center>
+      <section id="Proyecto" class="curso" style="width: 920px; justify-content: center;">
+      <h2>🦾 Proyecto integrador 🦾</h2>
+      <p>El proyecto consiste en el diseño y simulación de un sistema automático de barrera para estacionamiento, utilizando Arduino en Tinkercad. 
+        El sistema deberá detectar la presencia de un vehículo mediante un sensor y activa un servomotor que abre la barrera de acceso. 
+        </p>
+      <br>
+       <img src="medio.png" alt= "Cuando el sensor detecta el vehículo, el servo se activa y “abre la barrera” del estacionamiento." width="800">
+      <br>
+      <br>
+      <button>Ver más</button>
+      <br>
+      <br>
+      <p> Proyecto base: <a href="https://www.tinkercad.com/things/1XlQPMGOH73-nivel-intermedio-barra-de-estacionamiento" target="_blank"> Haz clic aquí
+  </a>
+</p>
+      <br>
+      <br>
+      <a href="/ia.html">
+      <button style="font-size: 18px; background-color: #e64b9e; color: white;"> Califica tu proyecto</button>
+      </a>
+      <br>
+      <br>
+    </section>
+    </center>
+  </section>
+
+ 
+
+  <!-- Contacto -->
+  <footer>
+    <p>© 2025 Future STEM Lab</p>
+  </footer>
+
+</body>
+</html>
